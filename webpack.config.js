@@ -2,7 +2,6 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { watchFile } = require('fs');
 
 module.exports = {
     entry: {
@@ -52,7 +51,7 @@ module.exports = {
         hot: false,
         watchFiles: true,
         liveReload: true,
-        open: false,
+        open: true,
         webSocketServer: false
     }
 };
