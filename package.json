@@ -4,7 +4,9 @@
   "description": "A TypeScript project template for CRCP 3320 in the Fall 2024 term.",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "dev": "webpack serve --mode development"
   },
   "keywords": [],
   "author": "",

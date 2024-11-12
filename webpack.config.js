@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        sketch: './src/sketch.ts'
+        // sketch: './src/sketch.ts'
+        something: './src/something.ts'
     },
     devtool: 'inline-source-map',
     module: {
@@ -33,9 +34,9 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'out/dist'),
-        // filename: '[name].[fullhash:8].js',
-        // sourceMapFilename: '[name].[fullhash:8].map',
-        // chunkFilename: '[name].[fullhash:8].js',
+        filename: '[name].[fullhash:8].js',
+        sourceMapFilename: '[name].[fullhash:8].map',
+        chunkFilename: '[name].[fullhash:8].js',
         clean: true
     },
     devServer: {
@@ -49,7 +50,7 @@ module.exports = {
         host: '127.0.0.1',
         port: 8080,
         hot: false,
-        watchFiles: true,
+        watchFiles: ['./src/**/*.ts'],
         liveReload: true,
         open: true,
         webSocketServer: false
